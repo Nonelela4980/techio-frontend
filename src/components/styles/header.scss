@@ -1,0 +1,13 @@
+@import '../../constants/theme.scss';
+
+.header{
+    width: 100%;
+    background-color:$light;
+    height: 100px;
+    border:2px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+
+

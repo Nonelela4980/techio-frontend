@@ -1,6 +1,10 @@
 @import  './constants/theme.scss';
-$primary:#FB1021;
-.App {
-  text-align: center;
-  color:$dark;
+
+.app{
+  width: 100%;
+
+}
+.container{
+  max-width: 1000px;
+  margin:auto;
 }

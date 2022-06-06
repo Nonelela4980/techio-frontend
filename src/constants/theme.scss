@@ -1,5 +1,34 @@
 $primary-color:#FB1021;
-$dark:#020000;
+$light-red:#E7303D;
+$dark:#0F0F23;
 $light:#fff;
 $light-blue:#9FC3CE;
+$light-dark:#3F3D3D;
 
+@mixin h1-style{
+    font-weight: 600;
+    font-size: 20pt;
+}
+
+@mixin h2-style{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.25rem;
+}
+
+@mixin  center-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+@mixin  search-inputs-styles {
+    font-weight: 600;
+    font-size: 14px;
+    height: 30px;
+    outline:none;
+}
+
+@mixin middle-icons{
+    font-weight: 600;
+    font-size: 14px;
+}

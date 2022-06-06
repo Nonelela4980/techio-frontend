@@ -1,0 +1,37 @@
+@import '../../constants/theme.scss';
+
+.header-top-section{
+    width: 100%;
+    height: 40px;
+    background-color: $light-dark;
+    color:$light;
+    padding:8px;
+}
+
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size:13px;
+    font-weight: 600;
+    @include center-content;
+    
+    .header-top-left{
+        display: flex;
+        flex-direction: row;
+        gap:0.5rem;
+
+        div{
+            display: flex;
+            align-items: center;
+            gap:0.2rem;
+        }
+    }
+
+    .header-top-right{
+        display:flex;
+        align-items:center;
+        cursor: pointer;
+    }
+}
