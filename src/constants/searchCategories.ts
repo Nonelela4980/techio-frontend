@@ -3,6 +3,27 @@ export interface Category{
     name:string
 }
 
+export const sortCategories : Category[] =[
+    {
+        id:1,
+        name:"Default",
+    },
+    {
+        id:2,
+        name:"Name",
+    },
+    {
+        id:3,
+        name:"Price: Lowest",
+    },
+    {
+        id:4,
+        name:"Price: Highest",
+    },
+
+];
+
+
 const categories : Category[] =[
         {
             id:1,
