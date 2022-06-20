@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import {FC} from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/headerMiddle.scss';
 import categories from '../../constants/searchCategories';
 import {Category} from '../../constants/searchCategories';
@@ -7,7 +8,10 @@ import Badge from '@mui/material/Badge';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+
 const HeaderMiddle : FC = () => {
+    const navigate=useNavigate()
+
     return (
         <div className='header-middle-section'>
             <div className="middle-section">
@@ -36,7 +40,7 @@ const HeaderMiddle : FC = () => {
                        
                         <p>Your Wishlist</p>
                     </div>
-                    <div>
+                    <div onClick={()=>navigate('/cart')}>
                     <Badge badgeContent={1} color="primary">
                         <ShoppingCartIcon className='middle-icons'/>
                     </Badge>

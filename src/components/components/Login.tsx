@@ -37,7 +37,7 @@ const Login : FC = () =>{
                     label='Password'
                    />
                    <div className="terms-conditions">
-                    <Checkbox className='checkBox' selected={acceptTerms} />
+                    <Checkbox className='checkBox' />
                     <p>I agree to the <span>Terms</span> and <span>Privacy Policy</span></p>
                    </div>
                    <div className="auth-buttons">

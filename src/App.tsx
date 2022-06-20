@@ -11,6 +11,7 @@ import Home from './pages/home/home';
 import ProductInfo from './components/components/ProductInfo';
 import Login from './components/components/Login';
 import Register from './components/components/Register';
+import Cart from './components/components/Cart';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='/products' element={<ProductList/>}/>
               <Route path='/product/details' element={<ProductInfo/>}/>
-
+              <Route path='/cart' element={<Cart/>}/>
             </Routes>
           </Router>
     </div>

@@ -61,9 +61,13 @@
 
         div{
              cursor: pointer;
+            
              p{
                 @include middle-icons;
              }
+        }
+        div:hover{
+            color: $light-red;
         }
     }
 }

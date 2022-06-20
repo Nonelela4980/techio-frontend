@@ -1,0 +1,51 @@
+@import '../../constants/theme.scss';
+
+.register-root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .register{
+        @include auth-conainer;
+        height: 400px !important;
+        h2{
+            @include h2-auth;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+            input{
+                @include auth-input-fields;                
+            }
+            .password-container{
+                height: 45px;
+                position:relative !important;
+                
+                div
+                {
+                    position: absolute !important;
+                    top:-31px;
+                    right: 0;
+                    
+                }
+            }
+            div{
+                display:flex;
+                flex-direction: column;
+                margin-top: 2rem;
+                gap:1rem;
+                .sign-in-btn{
+                    color:white !important;
+                    background-color: $light-red !important;
+                    font-weight: 700 !important;
+                }
+                .sign-up-btn{
+                    border:1px solid $light-red !important;
+                    color:$light-red !important;
+                    font-weight: 700 !important;
+                }
+            }
+        }
+    }
+}

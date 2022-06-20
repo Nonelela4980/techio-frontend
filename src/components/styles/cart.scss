@@ -1,0 +1,57 @@
+@import '../../constants/theme.scss';
+
+.cart-container{
+    @include center-content;
+    .cart{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        .cart-top{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: whitesmoke;
+            margin-bottom: 1rem;
+            span{
+                color:$light-red;
+            }
+        }
+        .cart-list{
+            display: flex;
+            flex-direction: column;
+            gap:0.8rem;
+        }
+        .total-section{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom:2px solid $dark;
+            // div{
+            //     flex: 1;
+            //     height: 0;
+            //     border:1px solid $dark;
+            // }
+        }
+        .cart-buttons{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .shop-button{
+                width: 500px;
+                color:$light-red !important;
+                border:1px solid $light-red;
+                font-weight: 700 !important;
+            }
+            .ship-button{
+                width: 500px;
+                background-color: $light-red;
+                color:white !important;
+                font-weight: 700 !important;
+            }
+        }
+    }
+}

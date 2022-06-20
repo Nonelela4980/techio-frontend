@@ -1,0 +1,46 @@
+@import '../../constants/theme.scss';
+.cart-item{
+    width:600px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:0.5rem;
+    border: 2px solid whitesmoke;
+    padding: 10px;
+    position: relative;
+    border-radius: 8px;
+    .image-container{
+        width: 180px;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    h3{
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .change-quantity{
+        width: 150px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: whitesmoke;
+        // background: linear-gradient(180deg, rgba(237, 35, 49, 0.6241) 27.08%, rgba(251, 16, 33, 0.1975) 55.73%);
+        border-radius: 25px;     
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .remove-item{
+        position:absolute;
+        left:0;
+        top:0;
+        .remove{
+            color:$light-red !important;
+        }
+    }
+}

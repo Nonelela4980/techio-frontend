@@ -33,6 +33,25 @@ $light-dark:#3F3D3D;
     font-size: 14px;
 }
 
-@mixin auth-buttons {
-    width:45%;
+@mixin auth-conainer {
+    width:500px;
+    height: 425px;
+    border:2px solid whitesmoke;
+    padding: 25px;
+}
+@mixin h2-auth {
+    text-align: center;
+    color:$primary-color;
+    margin-bottom: 2rem;
+}
+
+@mixin  auth-input-fields {
+    height: 40px;
+    font-size: 16px;
+    padding-left:8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: none;
+    border:2px solid rgb(235, 235, 235);
+    background-color: rgba(245, 245, 245, 0.641);
+    border-radius: 5px;
 }
