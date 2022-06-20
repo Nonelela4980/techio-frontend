@@ -25,7 +25,6 @@ const Cart : FC = () =>{
                 <Button className="shop-button">Continue shopping</Button>
                 <Button className="ship-button">Check Out</Button>
             </div>
-
            </div>
         </div>
     )
