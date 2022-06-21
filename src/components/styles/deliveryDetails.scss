@@ -1,0 +1,44 @@
+@import '../../constants/theme.scss';
+.delivery-details-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .details
+    {
+        @include auth-conainer;
+
+        h2{
+            @include h2-auth;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+            input{
+                @include auth-input-fields;             
+            }
+
+            .pay-online{
+                display: flex;
+                align-items: center;
+                gap:1rem;
+                .check{
+                    padding: 0 !important;
+                    margin:0 !important;
+                    color: $light-red;
+                }
+                p{
+                    font-size: 16px;
+                  
+                }
+            }
+
+            .continue-payment{
+                background-color: $light-red;
+                font-weight: 700 !important;
+                color:white !important;
+            }
+        }
+    }
+}

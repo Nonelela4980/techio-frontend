@@ -1,0 +1,19 @@
+@import '../../constants//theme.scss'; 
+.success-payment-container{
+    // width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    @include center-content;
+    .text{
+        display: flex;
+        flex-direction: row;
+        gap:1rem;
+        // justify-content: center;
+        align-items: center;
+        .done-icon{
+            color:green;
+        }
+    }
+}

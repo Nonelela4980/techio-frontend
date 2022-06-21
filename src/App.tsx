@@ -10,8 +10,10 @@ import {
 import Home from './pages/home/home';
 import ProductInfo from './components/components/ProductInfo';
 import Login from './components/components/Login';
-import Register from './components/components/Register';
 import Cart from './components/components/Cart';
+import DeliveryDetails from './components/components/DeliveryDetails';
+import Register from './components/components/Register';
+import SuccessPayment from './components/components/SuccessPayment';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
               <Route path='/products' element={<ProductList/>}/>
               <Route path='/product/details' element={<ProductInfo/>}/>
               <Route path='/cart' element={<Cart/>}/>
+              <Route path='/deliveryInfo' element={<DeliveryDetails/>}/>
+              <Route path='/payment-success' element={<SuccessPayment/>}/>
             </Routes>
           </Router>
     </div>

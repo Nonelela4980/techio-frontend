@@ -4,9 +4,6 @@ import HeaderMiddle from './HeaderMiddle';
 import HeaderTop from './HeaderTop';
 import Navigation from './Navigation';
 
-
-
-
 const Header : FC = () => {
     return (
         <div className='header'>
