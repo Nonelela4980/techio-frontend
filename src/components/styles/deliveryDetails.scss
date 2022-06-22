@@ -15,24 +15,37 @@
             display: flex;
             flex-direction: column;
             gap:1rem;
-            input{
-                @include auth-input-fields;             
-            }
-
-            .pay-online{
+            .form-group{
+                width: 100%;
                 display: flex;
-                align-items: center;
-                gap:1rem;
-                .check{
-                    padding: 0 !important;
-                    margin:0 !important;
-                    color: $light-red;
+                flex-direction: column;
+                gap:0.6rem;
+                input{
+                    @include auth-input-fields; 
+                    width: 100%;            
                 }
                 p{
-                    font-size: 16px;
-                  
+                    color:$primary-color;
+                }
+
+                .pay-online{
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    .check{
+                        padding: 0 !important;
+                        margin:0 !important;
+                        color: $light-red;
+                    }
+                    p{
+                        font-size: 16px;
+                        color:black;
+                      
+                    }
                 }
             }
+
+
 
             .continue-payment{
                 background-color: $light-red;

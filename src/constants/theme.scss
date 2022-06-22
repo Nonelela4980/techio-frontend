@@ -35,7 +35,7 @@ $light-dark:#3F3D3D;
 
 @mixin auth-conainer {
     width:500px;
-    height: 425px;
+    max-height: 900px;
     border:2px solid whitesmoke;
     padding: 25px;
 }
