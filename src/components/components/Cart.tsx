@@ -1,7 +1,7 @@
-import { Button } from '@mui/material';
+import { Button } from '@mui/material'
 import {FC} from 'react'
 import '../styles/cart.scss'
-import CartItem from './CartItem';
+import CartItem from './CartItem'
 
 const Cart : FC = () =>{
     return (

@@ -32,7 +32,9 @@ const Home :FC = () => {
 
                     <div className="product-list">
                         <Product
-                        name='Asus computer'
+                        id='fsdhjfksdf'
+                        title='Asus computer'
+                        description='sfdsdfsd'
                         category='Laptops'
                         price={4500}
                         imageUrl={require('../../assets/pictures/computer.jpg')}

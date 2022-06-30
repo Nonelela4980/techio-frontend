@@ -38,7 +38,9 @@ $light-dark:#3F3D3D;
     max-height: 900px;
     border:2px solid whitesmoke;
     padding: 25px;
+
 }
+
 @mixin h2-auth {
     text-align: center;
     color:$primary-color;
@@ -55,3 +57,26 @@ $light-dark:#3F3D3D;
     background-color: rgba(245, 245, 245, 0.641);
     border-radius: 5px;
 }
+
+
+//responsive design
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+);
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+        background-color: green;
+      }
+    }
+   
+    // If the key doesn't exist in the map
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+  }

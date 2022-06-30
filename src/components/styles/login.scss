@@ -7,6 +7,7 @@
 
     .register{
         @include auth-conainer;
+        @include respond-to('small');
         h2{
             @include h2-auth;
         }
@@ -57,3 +58,8 @@
         }
     }
 }
+
+//responsive design
+
+
+

@@ -1,12 +1,15 @@
-import { Button,IconButton } from '@mui/material';
-import {FC,useState} from 'react';
-import '../styles/login.scss';
+import { Button,IconButton } from '@mui/material'
+import {FC,useState} from 'react'
+import { useDispatch } from 'react-redux';
+import '../styles/login.scss'
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { z } from 'zod';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
+import { z } from 'zod'
 import { useForm,SubmitHandler } from 'react-hook-form'
 import {zodResolver} from '@hookform/resolvers/zod'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+import { User } from '../../helpers/stateInterfaces'
+import { logIn } from '../../redux/slices/userSlice'
 
 const Schema=z.object({
     email:z.string().email({message:"invalid email format"}).nonempty({message:"email required"}),
@@ -15,13 +18,24 @@ const Schema=z.object({
 
 type FormSchemaType = z.infer<typeof Schema>
 
-
 const Login : FC = () =>{
     const[isPassword,setFieldType]=useState<Boolean>(true)
-    const navigate=useNavigate()
     const {register,handleSubmit,formState:{errors}} =useForm<FormSchemaType>({resolver:zodResolver(Schema)})
+    const navigate=useNavigate()
+    const dispatch = useDispatch()
+
 
     const onSubmit: SubmitHandler<FormSchemaType> = (data)=>{
+        //call api end-point for auth
+        const userData : User = {
+            id:"asdas",
+            firstname:"string",
+            lastname:"string",
+            email:data.email,
+            address:null,
+        }
+
+        dispatch(logIn(userData))
 
     }
     return (

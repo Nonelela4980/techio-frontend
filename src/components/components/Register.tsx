@@ -1,10 +1,13 @@
-import { Button, Checkbox } from '@mui/material';
+import { Button, Checkbox } from '@mui/material'
+import { useDispatch } from 'react-redux';
 import {FC, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import '../styles/register.scss'
-import { z } from 'zod';
+import { z } from 'zod'
 import { useForm,SubmitHandler } from 'react-hook-form'
 import {zodResolver} from '@hookform/resolvers/zod'
+import { User } from '../../helpers/stateInterfaces'
+import { logIn } from '../../redux/slices/userSlice'
 
 const Schema=z.object({
     firstname:z.string().nonempty({message:"firstname is required"}),
@@ -19,11 +22,21 @@ type FormSchemaType = z.infer<typeof Schema>
 const Register : FC = () =>{
     const [acceptTerms,setTerms]=useState<Boolean>(true)
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const {register,handleSubmit,formState:{errors}}=useForm<FormSchemaType>({resolver:zodResolver(Schema)})
 
     const onSubmit : SubmitHandler<FormSchemaType> = (data)=>{
-        console.log(data);
+        //call api end-point for auth
+        const userData : User = {
+            id:"asdas",
+            firstname:data.firstname,
+            lastname:data.lastname,
+            email:data.email,
+            address:null,
+        }
+        
+        dispatch(logIn(userData))
     }
 
     return (

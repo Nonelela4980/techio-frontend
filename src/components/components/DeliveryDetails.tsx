@@ -17,9 +17,9 @@ type FormSchemaType = z.infer<typeof formSchema>
 
 const DeliveryDetails : FC = () =>{
     const {register,watch,handleSubmit,formState:{errors}} =useForm<FormSchemaType>({resolver:zodResolver(formSchema),})
-
+    
     const onSubmit : SubmitHandler<FormSchemaType> = (data)=>{
-        console.log(data);
+        //console.log(data);
     }
 
     return (

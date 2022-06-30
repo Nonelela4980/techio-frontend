@@ -27,28 +27,15 @@ const ProductList : FC = () =>{
 
                 <div className="products">
                 <Product
-                        name='Asus computer'
+                        id={'sdjfnskd'}
+                        title='Asus computer'
+                        description='fdsklihskfhgsdfsdf'
                         category='Laptops'
                         price={4500}
                         imageUrl={require('../../assets/pictures/computer.jpg')}
                         isNew={false}
                 />
 
-                <Product
-                        name='Asus computer'
-                        category='Laptops'
-                        price={4500}
-                        imageUrl={require('../../assets/pictures/computer.jpg')}
-                        isNew={false}
-                />
-
-                <Product
-                        name='Asus computer'
-                        category='Laptops'
-                        price={4500}
-                        imageUrl={require('../../assets/pictures/computer.jpg')}
-                        isNew={false}
-                />
                 </div>
 
             </div>

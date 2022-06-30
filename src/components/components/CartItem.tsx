@@ -2,9 +2,10 @@ import {FC} from 'react'
 import '../styles/cartItem.scss'
 import item from '../../assets/pictures/computer.jpg'
 import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import RemoveIcon from '@mui/icons-material/Remove'
 import { IconButton } from '@mui/material';
-import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
+import DeleteSharpIcon from '@mui/icons-material/DeleteSharp'
+
 const CartItem : FC = () =>{
     return (
         <div className='cart-item'>
@@ -30,5 +31,4 @@ const CartItem : FC = () =>{
         </div>
     )
 }
-
 export default CartItem;
