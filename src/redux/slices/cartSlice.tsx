@@ -1,6 +1,7 @@
 import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 import { Item,cartDataState,UpdateQuantityIF} from "../../helpers/stateInterfaces";
 import { RootState } from "../store";
+import { toast } from 'react-toastify';
 
 const storageItems=localStorage.getItem("cartItems")? localStorage.getItem("cartItems") : JSON.stringify([])
 
@@ -21,6 +22,11 @@ const cartSlice  = createSlice({
             else
             state.cartItems[index].quantity +=action.payload.quantity
             localStorage.setItem("cartItems",JSON.stringify(state.cartItems))
+
+
+            toast.success("Success Notification !", {
+                position: toast.POSITION.TOP_CENTER
+              });
         },
         removeItem:(state,action)=>{
             const index=state.cartItems.findIndex((item: Item)=>item.id===action.payload.id)

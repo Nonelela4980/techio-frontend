@@ -8,6 +8,15 @@ export interface Item{
     quantity:number,
 }
 
+export interface ProductContainer{
+    id:string,
+    title:string,
+    description:string,
+    category:string,
+    price:number,
+    imageUrl:string,
+}
+
 interface Address{
     street:string,
     town:string,
